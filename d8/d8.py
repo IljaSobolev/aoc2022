@@ -6,8 +6,6 @@ w = len(a[0])
 
 v = [[0 for _ in range(w)] for _ in range(h)]
 
-s = 0
-
 for i in range(h):
     m = -1
     for j in range(w):
@@ -22,7 +20,6 @@ for i in range(h):
         height = int(a[i][j])
         if height > m:
             v[i][j] = 1
-            s += 1
             m = height
 
 for i in range(w):
@@ -31,7 +28,6 @@ for i in range(w):
         height = int(a[j][i])
         if height > m:
             v[j][i] = 1
-            s += 1
             m = height
 
 for i in range(w):
@@ -40,7 +36,6 @@ for i in range(w):
         height = int(a[j][i])
         if height > m:
             v[j][i] = 1
-            s += 1
             m = height
 
 def score(i, j):
